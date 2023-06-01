@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="content__topbar" id="topbar">
+            <a class="content__topbar__logo" href="index.html">
+                <img src="images/logo-mega.png">
+            </a>
+            <div class="content__topbar__navbar">
+                <div class="content__topbar__navbar__block">MEGA.MP</div>
+                <div class="content__topbar__navbar__block">MEGA.GL</div>
+                <div class="content__topbar__navbar__block">Как зайти на сайт</div>
+                <div class="content__topbar__navbar__block disable-margin">Сотрудничество</div>
+            </div>
+        </div>
+        <div class="content__main" id="iframe1" data-aos="fade-up" data-aos-duration="2000">
+            <div class="content__main__text-block">
+                <span class="content__main__text-block__block1">MEGA.FO</span>
+                <span class="content__main__text-block__block2">Лучший маркетплейс по России и СНГ</span>
+                <span class="content__main__text-block__block3">Ensuring regular network presence without customer loss</span>
+                <span class="content__main__text-block__block4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </span>
+                <div class="content__main__text-block__btn">Заказать</div>
+            </div>
+            <div class="content__main__mega-banner">
+                <img src="images/banner-mega.png" class="content__main__mega-banner__img">
+            </div>
+        </div>
+        
+    </div>
+    <iframe src="page2.html" style="width: 100%;min-height: 1100px;border:0;display:none" id="iframe2" scrolling="no"></iframe>
+        <iframe src="page3.html" style="width: 100%;min-height: 712px;border:0;display:none" id="iframe3" scrolling="no"></iframe>
+        <iframe src="page4.html" style="width: 100%;min-height: 1187px;border:0;display:none" id="iframe4"></iframe>
+        <div class="content__arrow" id="content__arrow">
+            <div id="arrow1">
+                <img src="images/arrow-down.png">
+            </div>
+            <div id="arrow2" style="display: none;">
+                <img src="images/arrow-down.png">
+            </div>
+            <div id="arrow3" style="display: none;">
+                <img src="images/arrow-down.png">
+            </div>
+        </div>
+    <script>
+        let arrow1 = document.getElementById("arrow1");
+        let arrow2 = document.getElementById("arrow2");
+        let arrow3 = document.getElementById("arrow3");
+        arrow1.addEventListener('click', function(){
+            arrow1.style.display = "none";
+            arrow2.style.display = "flex";
+            document.getElementById("iframe1").style.display = "none";
+            document.getElementById("iframe2").style.display = "flex";
+            document.getElementById("topbar").scrollIntoView({block: "center", behavior: "smooth"})
+        });
+        arrow2.addEventListener('click', function(){
+            arrow2.style.display = "none";
+            arrow3.style.display = "flex";
+            document.getElementById("iframe2").style.display = "none";
+            document.getElementById("iframe3").style.display = "flex";
+            document.getElementById("topbar").scrollIntoView({block: "center", behavior: "smooth"});
+        });
+        arrow3.addEventListener('click', function(){
+            arrow3.style.display = "none";
+            document.getElementById("content__arrow").style.display = "none";
+            document.getElementById("iframe3").style.display = "none";
+            document.getElementById("iframe4").style.display = "flex";
+            document.getElementById("topbar").scrollIntoView({block: "center", behavior: "smooth"})
+        });
+        
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
